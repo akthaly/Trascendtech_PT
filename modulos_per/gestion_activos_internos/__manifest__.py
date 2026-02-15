@@ -11,7 +11,7 @@
     'data': [
         # rutas a los archivos XML de vistas, acciones, menús, etc.
         'security/ir.model.access.csv',
-    ]
+    ],
     'installable': True,
     'application': True,
 
