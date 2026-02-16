@@ -36,3 +36,5 @@ class ActivoInterno(models.Model):
         for record in self:
             if record.estado == 'asignado' and not record.empleado_asignado:
                 raise ValidationError("Si el estado es 'Asignado', debe tener un empleado asignado.")
+            if record.estado == 'disponible' and record.empleado_asignado:
+                raise ValidationError("Si el estado es 'Disponible', no debe tener un empleado asignado.")
