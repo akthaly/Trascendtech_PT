@@ -8,7 +8,7 @@ class ActivoInterno(models.Model):
 
 
     nombre = fields.Char(string='Nombre', required=True)
-    codigo = fields.Char(string='Código Interno', required=True, unique=True)
+    codigo = fields.Char(string='Código Interno', required=True)
 
     tipo = fields.Selection([
         ('laptop', 'Laptop'),
