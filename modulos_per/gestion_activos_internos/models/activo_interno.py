@@ -26,7 +26,7 @@ class ActivoInterno(models.Model):
         ('en_reparacion', 'En reparación'),
     ], string='Estado', default='disponible', required=True)
 
-    # Se define una restricción para SQL que asegura que el código interno sea único
+    # Define una restricción para SQL que asegura que el código interno sea único
     _sql_constraints = [
         ('codigo_unico', 'UNIQUE(codigo)', 'El código interno ya está en uso. Por favor, ingrese un código único.')
     ]

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="action_gestion_activo_interno" model="ir.actions.act_window">
+        <field name="name">Activos Internos</field>
+        <field name="res_model">gestion.activo.interno</field> <field name="view_mode">tree,form</field> </record>
+
+    <menuitem id="menu_gestion_activos_root" name="Activos Internos" sequence="10"/>
+    
+    <menuitem id="menu_gestion_activos_action" name="Activos" parent="menu_gestion_activos_root" action="action_gestion_activo_interno" sequence="10"/>
+
+    <record id="view_gestion_activo_interno_form" model="ir.ui.view">
+        <field name="name">gestion.activo.interno.form</field>
+        <field name="model">gestion.activo.interno</field>
+        <field name="arch" type="xml">
+            <form string="Activo Interno">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="codigo"/>
+                            <field name="tipo"/>
+                        </group>
+                        <group>
+                            <field name="empleado_asignado"/>
+                            <field name="fecha_asignacion"/>
+                            <field name="estado"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_gestion_activo_interno_tree" model="ir.ui.view">
+        <field name="name">gestion.activo.interno.tree</field>
+        <field name="model">gestion.activo.interno</field>
+        <field name="arch" type="xml">
+            <tree string="Activos Internos">
+                <field name="codigo"/>
+                <field name="nombre"/>
+                <field name="tipo"/>
+                <field name="empleado_asignado"/>
+                <field name="estado"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

@@ -11,6 +11,7 @@
     'data': [
         # rutas a los archivos XML de vistas, acciones, menús, etc.
         'security/ir.model.access.csv',
+        'views/activo_interno_view.xml',
     ],
     'installable': True,
     'application': True,
